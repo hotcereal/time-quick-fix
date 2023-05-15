@@ -1,0 +1,7 @@
+{
+"label":"Time Quick Fix",
+"icon":"timequickfix.png",
+"iconsel":"",
+"launch":"launch.sh",
+"description":"Syncs system time over wifi"
+}
