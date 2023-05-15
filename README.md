@@ -1,4 +1,4 @@
-# time-quick-fix
+# Time Quick Fix for Miyoo Mini+
 
 ![Main Apps UI](https://github.com/hotcereal/files/blob/main/TimeQuickFix.png?raw=true)
 
