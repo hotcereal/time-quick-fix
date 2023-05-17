@@ -11,6 +11,8 @@ Using NTP and CloudFlare, fix your system time.
 ## Installation
 
 1. Drag the `App` folder from this repo to the root of your SD card. Hit "Merge" on macOS and whatever does the same thing on the Windows. 
+  * By default, the time is set to UTC-0. Your timezone is probably not UTC-0. To fix this, open the `launch.sh` file within `App > TimeQuickFix` in a text editor and change `export TZ=UTC-0` to [whatever your UTC offset](https://en.wikipedia.org/wiki/List_of_UTC_offsets) is.
+  * For exmaple, eastern USA (New York, DC, Atlanta, Florida etc.) would change the line to `export TZ=UTC-5` since the UTC offset is shown as `-5:00` in the above link.
 
 ### Post-install
 
