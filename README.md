@@ -13,13 +13,14 @@ Using NTP and CloudFlare, fix your system time.
 1. Drag the `App` folder from this repo to the root of your SD card. Hit "Merge" on macOS and whatever does the same thing on the Windows. 
 
 ### IMPORTANT NOTE:
-    - By default, the time is set to UTC-0. Your timezone is probably not UTC-0. To fix this, open the `launch.sh` file within `App > TimeQuickFix` in a text editor and change `export TZ=UTC-0` to [whatever your UTC offset](https://en.wikipedia.org/wiki/List_of_UTC_offsets) is.
-    - This part is both important and slightly confusing. Example: astern USA (New York, DC, Atlanta, Florida etc.) is listed above as UTC-5:00. However, because of daylight savings time (which runs from Mar to Nov each year) it is "technically" UTC-4.
-    - On top of that, the TZ env is backwards too. So, in the end your result should not be UTC minus 4, but UTC *plus* 4. Confusing, I know. But, all in all, your end line should be `export TZ=UTC+4` if you are in the eastern USA region.
-      - Thank you to [XK](https://github.com/xk-tuff) for helping with this.
+
+   - By default, the time is set to UTC-0. Your timezone is probably not UTC-0. To fix this, open the `launch.sh` file within `App > TimeQuickFix` in a text editor and change `export TZ=UTC-0` to [whatever your UTC offset](https://en.wikipedia.org/wiki/List_of_UTC_offsets) is.
+     - ⚠️ This part is both important and slightly confusing. Example: astern USA (New York, DC, Atlanta, Florida etc.) is listed above as UTC-5:00. However, because of daylight savings time (which runs from Mar to Nov each year) it is "technically" UTC-4.
+     - On top of that, the TZ env is backwards. Meaning, eastern folks should not be UTC minus 4, but UTC *plus* 4. Confusing, I know. But, all in all, your end result should be `export TZ=UTC+4` if you are in the eastern USA region.
+        - Thank you to [XK](https://github.com/xk-tuff) for helping with this.
       
-  My recommendation is to make two `launch.sh` files. One for right now, one for when your region is no longer observing DST. When DST is over, simply rename the second launch.sh to the original name, `launch.sh`. The name of the copy you make does not matter.
-  * tl;dr: Find UTC offset, change the minus to plus or plus to minus, subtract 1 if your region observes daylight savings time. 
+  My ___recommendation___ is to make two `launch.sh` files. One for right now, one for when your region is no longer observing DST. When DST is over, simply rename the second launch.sh to the original name, `launch.sh`. The name of the copy you make does not matter.
+  * tl;dr: Find UTC offset, change the minus to plus or plus to minus, subtract 1 if your region observes daylight savings time. If your region does not observe DST, you will never need a second file.
         
 
 ### Post-install
