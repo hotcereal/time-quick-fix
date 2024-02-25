@@ -1,6 +1,6 @@
 #!/bin/sh
 echo $0 $*
-LD_PRELOAD=/mnt/SDCARD/miyoo/lib/libpadsp.so /mnt/SDCARD/.tmp_update/bin/infoPanel -t "Resyncing time" -m "Your time is being fixed!" --auto &
+LD_PRELOAD=/mnt/SDCARD/miyoo/lib/libpadsp.so /mnt/SDCARD/.tmp_update/bin/infoPanel -t "Resyncing time" -m "Your time is being fixed!" --auto
 
 cd $(dirname "$0")
 
